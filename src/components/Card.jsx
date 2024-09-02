@@ -4,8 +4,8 @@ import styles from './Card.module.css'
 function Card({price, sendUp, users, storage, title, priceMonthly, isMonthly}) {
     return (
         <div className={`${styles.card} ${title === 'Professional' ? styles.cardSpecial : ''}`}>
-            <h3>{title}</h3>
-            <h2><span>$</span>{isMonthly ? priceMonthly  : price }</h2>
+            <h2>{title}</h2>
+            <h3><span>$</span>{isMonthly ? priceMonthly  : price }</h3>
 
             <p>{+storage >= 1000 ? +storage / 1000 : storage} {+storage >= 1000 ? 'TB' : 'GB'} Storage</p>
             <p>{users} Users Allowed</p>

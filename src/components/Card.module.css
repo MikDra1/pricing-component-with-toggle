@@ -14,12 +14,12 @@
   backface-visibility: hidden;
 }
 
-.card h3 {
+.card h2 {
   font-size: 1rem;
   color: #4c4f62;
 }
 
-.card h2 {
+.card h3 {
   font-size: 4.5rem;
   display: flex;
   align-items: center;
