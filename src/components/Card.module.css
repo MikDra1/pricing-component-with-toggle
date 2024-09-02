@@ -1,0 +1,111 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  width: 90vw;
+  max-width: 400px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  isolation: isolate;
+  backface-visibility: hidden;
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: #4c4f62;
+}
+
+.card h2 {
+  font-size: 4.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #4c4f62;
+}
+
+.card h2 span {
+  font-size: 2rem;
+}
+
+.card p {
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+  padding-block: 1rem;
+  color: #737487;
+}
+
+.card p:first-of-type {
+  border-top: 1px solid #ebebeb;
+  margin-top: 2rem;
+}
+
+.card button {
+  background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card button:hover {
+  background: transparent;
+  outline: 1px solid hsl(237, 63%, 64%);
+  color: #4c4f62;
+}
+
+.cardSpecial {
+  background: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  z-index: 2;
+}
+
+.cardSpecial.cardSpecial button {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+.cardSpecial button:hover {
+  background: transparent;
+  outline: 1px solid white;
+  color: white;
+}
+
+.cardSpecial :is(h2, h3) {
+  color: white;
+}
+
+.cardSpecial p {
+  border-bottom: 1px solid #9a9ef3;
+  color: #fff;
+}
+
+.cardSpecial p:first-of-type {
+  border-top: 1px solid #9a9ef3;
+}
+
+@media (min-width: 1250px) {
+  .card {
+    box-sizing: content-box;
+    box-shadow: none;
+    max-width: 300px;
+  }
+  .cardSpecial {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    scale: 1.1;
+    padding: 3rem 2rem;
+  }
+}
